@@ -1,0 +1,13 @@
+:root {
+  --font: "Pretendard", sans-serif;
+  --red: #d20015;
+  --darkRed: #8E0114;
+  --cautionRed: #EE0018;
+  --cautionOrange: #ff780a;
+  --white: #fff;
+  --black: #111;
+  --gray: #8c8c8c;
+  --bgGray: #f5f5f5;
+  --borderGray: #dcdcdc;
+  --mediumGray: #565a5b;
+}/*# sourceMappingURL=variables.css.map */

@@ -1,0 +1,254 @@
+
+.es {
+  position: relative;
+  overflow: hidden;
+  width: 1024px;
+  height: 768px;
+  padding: 0 0 80px; //header bg image 고려
+  box-sizing: border-box;
+
+  //서브페이지 레이아웃
+  &__sub {
+    padding-top: 70px;
+
+    &__lang {
+      display: inline-block;
+      overflow: hidden;
+      width: 560px;
+      height: 53px;
+      
+      .lang {
+        &__select {
+          display: inline-block;
+          width: 25%;
+          height: 100%;
+
+          input[type=radio] {
+            display: none;
+
+            &:checked {
+              & + .lang__select__name--kr {
+                @include background('common', 'btn-lang1-kor-active.png');
+              }
+      
+              & + .lang__select__name--en {
+                @include background('common', 'btn-lang2-eng-active.png');
+              }
+      
+              & + .lang__select__name--ch {
+                @include background('common', 'btn-lang3-chi-active.png');
+              }
+      
+              & + .lang__select__name--jp {
+                @include background('common', 'btn-lang4-jap-active.png');
+              }
+            }
+          }
+
+          &__name {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+
+            &--kr {
+              @include background('common', 'btn-lang1-kor-default.png');
+            }
+    
+            &--en {
+              @include background('common', 'btn-lang2-eng-default.png');
+            }
+    
+            &--ch {
+              @include background('common', 'btn-lang3-chi-default.png');
+            }
+    
+            &--jp {
+              @include background('common', 'btn-lang4-jap-default.png');
+            }
+          }
+
+        }
+      }
+    }
+
+    .es {
+      &__header {
+        height: 70px;
+        padding: 10px 232px;
+        text-align: left;
+        font-size: 0;
+      }
+
+      &__logo {
+        position: absolute;
+        top: 50%;
+        left: 30px;
+        width: 159px;
+        height: 34px;
+        margin-top: -17px;
+        vertical-align: middle;
+        background-image: none;
+      }
+
+      &__select {
+        display: inline-block;
+        overflow: hidden;
+        width: 560px;
+        height: 50px;
+        border-radius: 10px;
+        background: #fff;
+      }
+
+      &__lang {
+        display: inline-block;
+        width: 25%;
+
+        &:not(:last-of-type) {
+          border-right: 1px solid #dcdcdc;
+        }
+
+        input[type=radio] {
+            display: none;
+
+            &:checked + .es__lang__name {
+                background: #8E0114;
+                border: none;
+                color: #fff;
+            }
+        }
+
+        &__name {
+            display: block;
+            background: #fff;
+            @include fontcss(#111, bold, 18px, 50px);
+            text-align: center;
+        }
+      }
+
+      &__timer {
+        position: absolute;
+        top: 50%;
+        right: 34px;
+        margin-top: -15px;
+        padding-left: 31px;
+        @include fontcss(#fff, bold, 24px, 30px);
+        letter-spacing: 0.03em;
+        
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 26px;
+          height: 100%;
+          @include background('common', 'ic-timer.png');
+        }
+      }
+    }
+  }
+
+  //헤더
+  &__header {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 90px;
+    padding: 25px 0 22px;
+    background: #d20015;
+    font-size: 0;
+    text-align: center; 
+  }
+
+  //로고
+  &__logo {
+    display: inline-block;
+    width: 200px; 
+    height: 43px;
+    @include background('common', 'logo.png');
+    font-size: 0;
+  }
+  
+  //레이아웃
+  &__content {
+    width: 100%;
+    height: 100%;
+  }
+
+  //하단 버튼
+  &__nav {
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    right: 40px;
+    z-index: 1;
+
+    &__button {
+        position: relative;
+        width: 220px;
+        height: 60px;
+        border-radius: 15px;
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+        
+        span {
+          font-family: 'Pretendard', sans-serif;
+          @include fontcss(#fff, bold, 24px, 58px);
+        }
+
+        //화살표
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 30px;
+            width: 14px;
+            height: 100%;
+            @include background('common', 'ic-triangle-left.png');
+        }
+
+        //배경
+        &:after {
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: -8px;
+            z-index: -1;
+            width: 236px;
+            height: 76px;
+            @include background('common', 'btn-bottom-black-bg.png');
+        }
+
+        &--exit {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 0 49px 0 78px;
+
+            &:before {
+                content: '';
+                left: 30px;
+            }
+        }
+
+        &--next {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 0 60px 0 49px;
+            
+            &:before {
+                content: '';
+                left: auto;
+                right: 30px;
+                background-image: url(src('common', 'ic-triangle-right.png'));
+            }
+
+            &:after {
+              background-image: url(src('common', 'btn-bottom-red-bg.png'))
+            }
+        }
+    }
+  }
+}

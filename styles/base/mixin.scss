@@ -1,0 +1,62 @@
+@mixin clear() {
+  &:after {
+    display: block;
+    clear: both;
+    content: '';
+  }
+}
+
+//말줄임 후략
+@mixin line($lineCount: 1) {
+  /* 사용법 : @include line(라인수) */
+  @if ($lineCount == 1) {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
+  @else if($lineCount == 'auto') {
+    display: block;
+    overflow: visible;
+  }
+  @else {
+      /* autoprefixer: off */
+      -webkit-box-orient: vertical;
+
+      /* autoprefixer: on */
+      display: block;
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: break-all;
+      -webkit-line-clamp: $lineCount;
+  }
+}
+
+@mixin fontcss($color: #111, $weight: 400, $size: 15px, $lineheight: 1.2) {
+  @if ($color) {
+    color: $color;
+  }
+  @if ($weight) {
+    font-weight: $weight;
+  }
+  @if ($size) {
+    font-size: $size;
+  }
+  @if ($lineheight) {
+    line-height: $lineheight;
+  }
+}
+
+//image url
+@function src($folder: 'common', $filename: '') {
+  @return '../assets/images/#{$folder}/#{$filename}';
+}
+
+
+@mixin background($folder: 'common', $filename: '') {
+  background-image: url(src(#{$folder}, #{$filename}));
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% auto;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../assets/images/#{$folder}/#{$filename}',sizingMethod='scale');
+}
