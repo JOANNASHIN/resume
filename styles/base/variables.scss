@@ -1,6 +1,26 @@
 :root {
   --font: "Pretendard", sans-serif;
 
+  --point: #006363;
+
+  //secondary
+  --mint: #00bdb6;
+  --darkmint: #006363;
+  --lightmint: #e7fcfc;
+  --lightorange: #fff1eb;
+  --lightblue: #e6f3ff;
+
+  //neutrals
+  --white: #fff;
+  --grey50: #f8f8f8;
+  --grey80: #f2f2f2;
+  --grey100: #e8e8e8;
+  --grey200: #ddd;
+  --grey400: #ccc;
+  --grey500: #aaa;
+  --grey600: #888;
+  --grey800: #666;
+
   --red: #d20015;
   --darkRed: #8E0114;
   --cautionRed: #EE0018;
@@ -16,6 +36,24 @@
 }
 
 $font: var(--font);
+
+$point: var(--point);
+
+//secondary
+$mint: var(--mint);
+$darkmint: var(--darkmint);
+$lightmint: var(--lightmint);
+$lightorange: var(--lightorange);
+$lightblue: var(--lightblue);
+
+$greyf8: var(--grey50);
+$greyf2: var(--grey80);
+$greye8: var(--grey100);
+$greyddd: var(--grey200);
+$greyccc: var(--grey400);
+$greyaaa: var(--grey500);
+$grey888: var(--grey600);
+$grey666: var(--grey800);
 
 $red: var(--red);
 $darkRed: var(--darkRed);

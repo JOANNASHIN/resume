@@ -60,3 +60,15 @@
   background-size: 100% auto;
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../assets/images/#{$folder}/#{$filename}',sizingMethod='scale');
 }
+
+@mixin dot() {
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 6px;
+    background: $black;
+    border-radius: 100%;
+  }
+}

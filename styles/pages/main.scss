@@ -1,0 +1,82 @@
+@import '../app.scss';
+
+.resume { 
+  font-size: 16px;
+
+  &__highlight {
+    background: $lightmint;
+
+    &--orange {
+      background: $lightorange;
+    }
+  }
+
+  &__wrapper {
+    display: block;
+    width: 900px;
+    margin: 0 auto;
+  }
+
+  &__basic {
+    display: flex;
+    align-items: center;
+    margin: 30px 0 50px;
+
+    &__img {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      margin-right: 20px;
+      border-radius: 50%;
+      background: $greyf8;
+    }
+
+    &__name {
+      @include fontcss($black, bold, 30px, 1.4);
+    }
+  }
+
+  &__section {
+    margin-bottom: 60px;
+
+    .section {
+      &__title {
+        display: block;
+        padding-bottom: 4px;
+        border-bottom: 1px solid $greye8;
+        @include fontcss($point, bold, 26px, 1.4);
+      }
+
+      &__division {
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 20px 0;
+
+        &__title {
+          flex: 0 0 300px;
+          @include fontcss($black, bold, 20px, 1.4);
+        }
+      }
+    }
+  }
+
+  &__contact {
+    &__text {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      @include fontcss($black, 600, 17px, 1.4);
+      @include dot();
+
+      em {
+        padding: 0 6px;
+        margin-right: 10px;
+        font-weight: bold;
+      }
+
+      a {
+        margin-left: 10px;
+      }
+    }
+  }
+}

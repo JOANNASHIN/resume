@@ -1,5 +1,20 @@
 :root {
   --font: "Pretendard", sans-serif;
+  --point: #006363;
+  --mint: #00bdb6;
+  --darkmint: #006363;
+  --lightmint: #e7fcfc;
+  --lightorange: #fff1eb;
+  --lightblue: #e6f3ff;
+  --white: #fff;
+  --grey50: #f8f8f8;
+  --grey80: #f2f2f2;
+  --grey100: #e8e8e8;
+  --grey200: #ddd;
+  --grey400: #ccc;
+  --grey500: #aaa;
+  --grey600: #888;
+  --grey800: #666;
   --red: #d20015;
   --darkRed: #8E0114;
   --cautionRed: #EE0018;

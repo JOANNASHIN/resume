@@ -1,5 +1,52 @@
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../assets/fonts/Pretendard-Light.eot");
+  src: url("../assets/fonts/Pretendard-Light.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Pretendard-Light.woff2") format("woff2"), url("../assets/fonts/Pretendard-Light.woff") format("woff"), url("../assets/fonts/Pretendard-Light.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../assets/fonts/Pretendard-Regular.eot");
+  src: url("../assets/fonts/Pretendard-Regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Pretendard-Regular.woff2") format("woff2"), url("../assets/fonts/Pretendard-Regular.woff") format("woff"), url("../assets/fonts/Pretendard-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../assets/fonts/Pretendard-Medium.eot");
+  src: url("../assets/fonts/Pretendard-Medium.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Pretendard-Medium.woff2") format("woff2"), url("../assets/fonts/Pretendard-Medium.woff") format("woff"), url("../assets/fonts/Pretendard-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  font-style: normal;
+  src: url("../assets/fonts/Pretendard-Bold.eot");
+  src: url("../assets/fonts/Pretendard-Bold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Pretendard-Bold.woff2") format("woff2"), url("../assets/fonts/Pretendard-Bold.woff") format("woff"), url("../assets/fonts/Pretendard-Bold.ttf") format("truetype");
+  font-display: swap;
+}
 :root {
   --font: "Pretendard", sans-serif;
+  --point: #006363;
+  --mint: #00bdb6;
+  --darkmint: #006363;
+  --lightmint: #e7fcfc;
+  --lightorange: #fff1eb;
+  --lightblue: #e6f3ff;
+  --white: #fff;
+  --grey50: #f8f8f8;
+  --grey80: #f2f2f2;
+  --grey100: #e8e8e8;
+  --grey200: #ddd;
+  --grey400: #ccc;
+  --grey500: #aaa;
+  --grey600: #888;
+  --grey800: #666;
   --red: #d20015;
   --darkRed: #8E0114;
   --cautionRed: #EE0018;
@@ -531,4 +578,88 @@ details[open] summary + * {
 }
 .es__nav__button--next:after {
   background-image: url("../assets/images/common/btn-bottom-red-bg.png");
-}/*# sourceMappingURL=app.css.map */
+}
+
+.resume {
+  font-size: 16px;
+}
+.resume__highlight {
+  background: var(--lightmint);
+}
+.resume__highlight--orange {
+  background: var(--lightorange);
+}
+.resume__wrapper {
+  display: block;
+  width: 900px;
+  margin: 0 auto;
+}
+.resume__basic {
+  display: flex;
+  align-items: center;
+  margin: 30px 0 50px;
+}
+.resume__basic__img {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  border-radius: 50%;
+  background: var(--grey50);
+}
+.resume__basic__name {
+  color: var(--black);
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 1.4;
+}
+.resume__section {
+  margin-bottom: 60px;
+}
+.resume__section .section__title {
+  display: block;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--grey100);
+  color: var(--point);
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.4;
+}
+.resume__section .section__division {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 20px 0;
+}
+.resume__section .section__division__title {
+  flex: 0 0 300px;
+  color: var(--black);
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.4;
+}
+.resume__contact__text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  color: var(--black);
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 1.4;
+}
+.resume__contact__text:before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 6px;
+  background: var(--black);
+  border-radius: 100%;
+}
+.resume__contact__text em {
+  padding: 0 6px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+.resume__contact__text a {
+  margin-left: 10px;
+}/*# sourceMappingURL=main.css.map */
